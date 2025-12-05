@@ -1,32 +1,31 @@
-circle {
+svg > circle:nth-of-type(1),
+svg > circle:nth-of-type(2) {
     fill: #5f5f5f;
 }
 
-path {
+svg > path:nth-of-type(1),
+svg > path:nth-of-type(2) {
     stroke: #5f5f5f;
     stroke-width: 8px;
 }
 
-circle.small {
+svg > circle.small {
     fill: white;
+}
+
+g.contained:nth-of-type(1) circle {
+    fill: #573d29;
 }
 
 svg > rect {
     opacity: 0;
 }
 
-.contained rect {
-    opacity: 1;
-}
-
-.contained .small {
-    fill: #573d29;
-}
-
-.contained > circle,
-.contained > rect {
+g.contained:nth-of-type(2) circle,
+g.contained:nth-of-type(2) rect {
     fill: #c0c0c0;
     stroke: none;
+    opacity: 1;
 }
 
 #interactive {
@@ -39,6 +38,6 @@ svg > rect {
     fill: #bd250d;
 }
 
-path:last-of-type {
+svg > path:last-of-type {
     stroke: none;
 }
